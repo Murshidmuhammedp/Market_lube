@@ -4,7 +4,7 @@ function Quotes() {
     return (
         <div className='bg-black p-16'>
             <div>
-                <h1 className='text-white font-semibold text-3xl text-center'><span className='text-yellow-300 text-5xl'>“</span>Lorem ipsum dolor sit amet, consectetuer<br />
+                <h1 className='text-white font-bold text-3xl text-center'><span className='text-yellow-300 text-5xl'>“</span>Lorem ipsum dolor sit amet, consectetuer<br />
                     adipiscing elit, sed diam nonummy nibh euismod <br />
                     tincidunt ut laoreet dolore magna aliquam erat <br />
                     volutpat. Ut wisi enim ad minim veniam.”</h1>

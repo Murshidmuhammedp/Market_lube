@@ -4,9 +4,9 @@ const Footer = () => {
     return (
 
         <footer
-            className="bg-black text-center  lg:text-left h-36">
+            className="bg-black text-center  lg:text-left h-28">
             <div
-                className="flex items-center justify-center  p-6 pl-20 dark:border-neutral-500 lg:justify-between">
+                className="flex items-center justify-center pl-20 dark:border-neutral-500 lg:justify-between">
 
                 {/* <!-- Social network icons container --> */}
                 <div className="flex justify-center">

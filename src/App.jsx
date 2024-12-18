@@ -6,21 +6,22 @@ import Quotes from './components/Quotes'
 import Location from './pages/Location'
 import ContentPage from './pages/ContentPage'
 import Word from './components/Word'
+import HomePage from './pages/HomePage'
+import SlidingCards from './pages/SlidingCards'
 
 function App() {
 
   return (
     <>
       <Navbar />
-      {/* <h1>hooi</h1> */}
-      {/* <h1>hii</h1> */}
-      <ContentPage />
+      <h1>hooi</h1>
+      <HomePage />
+      <h1>hii</h1>
       <Word />
-      <h1>how are you</h1>
+      <ContentPage />
+      <SlidingCards />
       <Quotes />
-      <h1>start</h1>
       <Location />
-      <h1>end</h1>
       <Footer />
     </>
   )
