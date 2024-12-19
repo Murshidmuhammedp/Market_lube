@@ -1,3 +1,8 @@
+import React, { useRef } from 'react';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+
 const cards = [
     {
         image: "https://w0.peakpx.com/wallpaper/304/871/HD-wallpaper-kawasaki-ninja-h2r-bike-black-bike-parked-black-bike-parked-bike.jpg",
@@ -32,11 +37,31 @@ const cards = [
     }
 ];
 
-import React, { useRef } from 'react';
 
 const SlidingCards = () => {
 
     const sliderRef = useRef(null);
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        centerMode: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 2 },
+            },
+            {
+                breakpoint: 768,
+                settings: { slidesToShow: 1 },
+            },
+        ],
+    };
 
 
     return (
@@ -44,43 +69,46 @@ const SlidingCards = () => {
             <h1 className="text-3xl font-semibold text-white ml-[-1250px]"> <span className='text-yellow-400'>Guides</span> for you</h1>
             <div
                 ref={sliderRef}
-                className="flex overflow-x-scroll scrollbar-hide space-x-4 p-4 w-full"
+                className=" overflow-x-scroll scrollbar-hide space-x-4 p-4 w-full"
                 style={{ scrollSnapType: 'x mandatory' }}
             >
-                {cards.map((card, index) => (
-                    <div
-                        key={index}
-                        className="flex-shrink-0 w-1/4 p-8"
-                        style={{ scrollSnapAlign: 'start' }}
-                    >
-                        <div className="h-[500px] w-full hover:scale-105 transform transition-all duration-500 relative">
-                            <img
-                                src={card.image}
-                                alt={card}
-                                className="w-full h-full object-cover cursor-pointer"
-                            />
+                <Slider {...settings}>
+                    {cards.map((card, index) => (
+                        <div
+                            key={index}
+                            className="flex-shrink-0 w-1/4 p-8"
+                            style={{ scrollSnapAlign: 'start' }}
+                        >
+                            <div className="h-[500px] w-full hover:scale-105 transform transition-all duration-500 relative">
+                                <img
+                                    src={card.image}
+                                    alt={card}
+                                    className="w-full h-full object-cover cursor-pointer"
+                                />
 
-                            <div className="absolute bottom-4 left-4 text-lg font-semibold text-white bg-black bg-opacity-40 px-3 py-1 rounded">
-                                {(() => {
-                                    const words = card.text.split(' ');
-                                    const firstLine = words.slice(0, 3).join(' ');
-                                    const secondLine = words.slice(3, 6).join(' ');
-                                    const thirdLine = words.slice(6).join(' ');
-                                    return (
-                                        <>
-                                            <p>{firstLine}</p>
-                                            <p className="text-yellow-500">{secondLine}</p>
-                                            <p>{thirdLine}</p>
-                                        </>
-                                    );
-                                })()}
+                                <div className="absolute bottom-4 left-4 text-lg font-semibold text-white bg-black bg-opacity-30 px-3 py-1 rounded">
+                                    {(() => {
+                                        const words = card.text.split(' ');
+                                        const firstLine = words.slice(0, 3).join(' ');
+                                        const secondLine = words.slice(3, 6).join(' ');
+                                        const thirdLine = words.slice(6).join(' ');
+                                        return (
+                                            <>
+                                                <p>{firstLine}</p>
+                                                <p className="text-yellow-500">{secondLine}</p>
+                                                <p>{thirdLine}</p>
+                                            </>
+                                        );
+                                    })()}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                ))}
-            </div>
+                    ))
+                    }
+                </Slider>
+            </div >
             <h2 className="text-3xl font-semibold text-white ml-[-1180px]"> <span className='text-yellow-400'>Testimonials</span>  for you</h2>
-        </div>
+        </div >
     );
 };
 

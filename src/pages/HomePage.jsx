@@ -5,8 +5,8 @@ function HomePage() {
     return (
         <div className='h-screen bg-black p-16 flex flex-col justify-between'>
             <div className='flex justify-center items-center'>
-                <h1 className='text-[#37363733] text-9xl font-extrabold text-center'>
-                    <span className='relative group'>
+                <h1 className='text-[#37363733] text-9xl font-extrabold text-center relative group'>
+                    <span className='relative block'>
                         RIDE FOR <br />
                         <span className='relative z-10'>YOUR PASSION</span>
                     </span>

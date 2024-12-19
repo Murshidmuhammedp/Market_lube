@@ -8,16 +8,17 @@ import ContentPage from './pages/ContentPage'
 import Word from './components/Word'
 import HomePage from './pages/HomePage'
 import SlidingCards from './pages/SlidingCards'
+import BrandLogos from './components/BrandLogos'
 
 function App() {
 
   return (
     <>
       <Navbar />
-      <h1>hooi</h1>
       <HomePage />
-      <h1>hii</h1>
       <Word />
+
+      <BrandLogos />
       <ContentPage />
       <SlidingCards />
       <Quotes />
