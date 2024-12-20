@@ -25,28 +25,34 @@ function BrandLogos() {
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 1500,
+        autoplaySpeed: 1000,
         centerMode: true,
         arrows: false,
         responsive: [
             {
                 breakpoint: 1024,
-                settings: { slidesToShow: 2 },
+                settings: { slidesToShow: 3 },
             },
             {
                 breakpoint: 768,
-                settings: { slidesToShow: 1 },
+                settings: { slidesToShow: 2 },
             },
         ],
     };
 
     return (
-        <div className='w-full bg-black h-96 flex items-center'>
+        <div className='w-full bg-black h-72 '>
             <div className=' w-full h-28 flex items-center justify-center'>
                 <div className='h-full  w-1/3 flex items-center justify-center '>
                     <h1 className='text-white font-normal text-xl'>Featuring worlds top <span className='text-yellow-400'>brands</span>  for you</h1>
                 </div>
-                <div className=' h-full w-3/5'>
+
+                <div className=' h-full w-3/5 relative overflow-hidden'>
+
+                    <div className="absolute top-0 left-0 h-full w-32 bg-gradient-to-r from-black to-transparent pointer-events-none z-10"></div>
+
+                    <div className="absolute top-0 right-0 h-full w-32 bg-gradient-to-l from-black to-transparent pointer-events-none z-10"></div>
+
                     <Slider {...settings}>
                         {logos.map((logo, index) => (
                             <div

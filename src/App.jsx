@@ -17,7 +17,6 @@ function App() {
       <Navbar />
       <HomePage />
       <Word />
-
       <BrandLogos />
       <ContentPage />
       <SlidingCards />
