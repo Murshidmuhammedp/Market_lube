@@ -11,8 +11,11 @@ export default {
       },
       keyframes: {
         float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-60px)' },
+          '0%, 100%': { transform: 'translateX(0) translateY(0)' }, // Start and end at the center
+          // Slight left and right movements
+          '25%': { transform: 'translateX(-10px) translateY(-5px)' }, // Move left and slightly up
+          '50%': { transform: 'translateX(10px) translateY(5px)' },   // Move right and slightly down
+          '75%': { transform: 'translateX(-5px) translateY(-3px)' },
         },
       },
     },

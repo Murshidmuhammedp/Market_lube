@@ -19,13 +19,13 @@ function BrandLogos() {
     ]
 
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
-        speed: 1000,
-        slidesToShow: 4,
-        slidesToScroll: 1,
+        speed: 3000,
+        slidesToShow: 5,
         autoplay: true,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 0,
+        cssEase: "linear",
         centerMode: true,
         arrows: false,
         responsive: [

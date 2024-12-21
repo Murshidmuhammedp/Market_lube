@@ -1,5 +1,5 @@
 import React from 'react'
-import dirtbike from "../assets/dirtbike1.png"
+import dirtbike from "../assets/dirtbike.png"
 import { GoArrowUpRight } from 'react-icons/go'
 
 function Location() {
@@ -33,11 +33,11 @@ function Location() {
             </div >
 
             {/* Image */}
-            < div className="flex justify-center" >
+            < div className="flex justify-center">
                 <img
                     src={dirtbike}
                     alt="dirtbike"
-                    className='w-auto max-h-[65vh] object-contain mt-[-130px] z-10'
+                    className='w-auto max-h-[65vh] object-contain mt-[-130px] z-10 hover:animate-[float_1s_ease-in-out_infinite]'
                 />
             </div >
         </div >
