@@ -4,10 +4,20 @@
 
 
 .scrollbar-hide {
-    -ms-overflow-style: none; 
-    scrollbar-width: none; 
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-    display: none; 
+    display: none;
+}
+
+.neon-line {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 5px #f3f92e, 0 0 20px #29dc32, 0 0 30px #29dc32;
+    z-index: 9999;
 }

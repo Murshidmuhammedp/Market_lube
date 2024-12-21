@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       animation: {
-        float: 'float 1s ease-in-out infinite'
+        float: 'float 1s ease-in-out infinite',
+        pulse: 'pulse 1s infinite',
       },
       keyframes: {
         float: {
