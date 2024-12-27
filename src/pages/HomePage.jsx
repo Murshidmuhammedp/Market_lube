@@ -1,58 +1,5 @@
-// import React, { useEffect, useState } from 'react'
-// import dirtbike from '../assets/dirtBike1.png'
-
-// function HomePage() {
-
-//     const [position, setPosition] = useState({ x: 0, y: 0 });
-
-//     useEffect(() => {
-//         const handleMouseMove = (e) => {
-//             const { clientX, clientY } = e;
-//             setPosition({ x: clientX, y: clientY });
-//         };
-
-//         window.addEventListener('mousemove', handleMouseMove);
-
-//         return () => {
-//             window.removeEventListener('mousemove', handleMouseMove);
-//         };
-//     }, []);
-
-//     const transformX = (position.x - window.innerWidth / 2) / 20;
-//     const transformY = (position.y - window.innerHeight / 2) / 20;
-
-//     return (
-//         <div className='h-screen bg-black p-16 flex flex-col justify-between'>
-//             <div className='flex justify-center items-center'>
-//                 <h1 className='text-[#37363733] text-9xl font-extrabold text-center relative group'>
-//                     <span className='relative block'>
-//                         RIDE FOR <br />
-//                         <span className='relative z-10'>YOUR PASSION</span>
-//                     </span>
-//                 </h1>
-//             </div>
-
-//             <div className="flex justify-center"
-//                 style={{
-//                     transform: `translate(${transformX}px, ${transformY}px)`,
-//                     transition: 'transform 0.1s ease-out',
-//                 }}
-//             >
-//                 <img
-//                     src={dirtbike}
-//                     alt="dirtbike"
-//                     className='w-auto max-h-[60vh] object-contain mt-[-110px]'
-//                 />
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default HomePage;
-
-
 import React, { useState, useEffect } from "react";
-import dirtbike from '../assets/dirtBike.png';
+import dirtbike from '../../public/dirtbike.png';
 
 // Glow Component
 const GlowEffect = ({ position }) => (
