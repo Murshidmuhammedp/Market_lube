@@ -1,5 +1,5 @@
 import React from 'react'
-import dirtbike from "../assets/dirtbike.png"
+import dirtbike from "../../src/assets/dirtbike.png"
 import { GoArrowUpRight } from 'react-icons/go'
 
 function Location() {
