@@ -35,20 +35,51 @@ function BrandLogos() {
             },
             {
                 breakpoint: 768,
-                settings: { slidesToShow: 2 },
+                settings: { slidesToShow: 3 },
             },
         ],
     };
 
     return (
-        <div className='w-full bg-black h-72 '>
-            <div className=' w-full h-28 flex items-center justify-center'>
-                <div className='h-full  w-1/3 flex items-center justify-center '>
-                    <h1 className='text-white font-normal text-xl'>Featuring worlds top <span className='text-yellow-400'>brands</span>  for you</h1>
+        // <div className='w-full bg-black h-72 '>
+        //     <div className=' w-full h-28 flex items-center justify-center'>
+        //         <div className='h-full  w-1/3 flex items-center justify-center '>
+        //             <h1 className='text-white font-normal text-xl'>Featuring worlds top <span className='text-yellow-400'>brands</span>  for you</h1>
+        //         </div>
+
+        //         <div className=' h-full w-3/5 relative overflow-hidden'>
+
+        //             <div className="absolute top-0 left-0 h-full w-32 bg-gradient-to-r from-black to-transparent pointer-events-none z-10"></div>
+
+        //             <div className="absolute top-0 right-0 h-full w-32 bg-gradient-to-l from-black to-transparent pointer-events-none z-10"></div>
+
+        //             <Slider {...settings}>
+        //                 {logos.map((logo, index) => (
+        //                     <div
+        //                         key={index}
+        //                         className="hover:scale-105 transform transition-all duration-500 relative">
+        //                         <img
+        //                             src={logo}
+        //                             alt={logo}
+        //                             className="w-24 h-24  cursor-pointer"
+        //                         />
+        //                     </div>
+        //                 ))
+        //                 }
+        //             </Slider>
+
+        //         </div>
+        //     </div>
+        // </div>
+
+
+        <div className='w-full bg-black h-auto py-28'>
+            <div className='flex flex-col md:flex-row items-center justify-center md:space-x-6 space-y-6 md:space-y-0'>
+                <div className='text-center md:text-left px-4'>
+                    <h1 className='text-white text-xl font-semibold'>Featuring worlds top <span className='text-yellow-400'>brands</span>  for you</h1>
                 </div>
 
-                <div className=' h-full w-3/5 relative overflow-hidden'>
-
+                <div className='relative overflow-hidden w-full max-w-3xl'>
                     <div className="absolute top-0 left-0 h-full w-32 bg-gradient-to-r from-black to-transparent pointer-events-none z-10"></div>
 
                     <div className="absolute top-0 right-0 h-full w-32 bg-gradient-to-l from-black to-transparent pointer-events-none z-10"></div>
@@ -61,13 +92,11 @@ function BrandLogos() {
                                 <img
                                     src={logo}
                                     alt={logo}
-                                    className="w-24 h-24  cursor-pointer"
+                                    className="w-20 h-20  cursor-pointer"
                                 />
                             </div>
-                        ))
-                        }
+                        ))}
                     </Slider>
-
                 </div>
             </div>
         </div>

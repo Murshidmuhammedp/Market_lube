@@ -8,12 +8,13 @@ import Word from './components/Word'
 import HomePage from './pages/HomePage'
 import SlidingCards from './pages/SlidingCards'
 import BrandLogos from './components/BrandLogos'
-import NeonCursor from './components/NeonCursur'
+// import NeonCursor from './components/NeonCursur'
 
 function App() {
 
   return (
     <>
+      {/* <NeonCursor /> */}
       <Navbar />
       <HomePage />
       <Word />
@@ -23,7 +24,6 @@ function App() {
       <Quotes />
       <Location />
       <Footer />
-      {/* <NeonCursor /> */}
     </>
   )
 }
